@@ -1,0 +1,106 @@
+<html>
+<body>
+<style>
+    .title span {
+        background-color: rgb(255, 220, 184);
+        margin-top: 1%;
+        margin-left: 1%;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+    }
+    span.user {
+        display: inline;
+        vertical-align: middle;
+        margin-right: 0.5%;
+    }
+    #result_user {
+        background-color: rgb(127, 216, 116);
+        font-size: 1.5em;
+        margin-left: 1%;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+    }
+    #result_home {
+        background-color: rgb(240, 98, 98);
+        font-size: 1.25em;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+    }
+    #total {
+        margin-left: 1%;
+    }
+    table {
+        border: 3px solid black;
+    }
+    th {
+        border: 1px solid black;
+        background: rgb(255, 255, 177);
+        border-collapse: collapse;
+        border-spacing: 1%;
+    }
+    td {
+        border: 1px solid gray;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    #purple {
+        color: rgb(173, 0, 173);
+    }
+</style>
+<header>
+    <div class='header'>
+        <h1 class='title'><span>Segment Performance Points Project</span></h1>
+    </div>
+    <div>
+        <span class='user' id='result_user'>Showing Segment Performances for: <strong>{{ user_name }}</strong>!</span>
+        <span class='user'><img src='{{ avatar }}' alt='User avatar'></img></span>
+        <span class='user' id='result_home'><a href="{{ url_for('index') }}" class='title'>Home</a></span>
+    </div>
+</header>
+
+    <div class='container'>
+        <h1 id='total'>Total PP: <span id=purple>{{ total_pp }}pp</span></h1>
+    </div>
+    <table id='data'>
+        <thead>
+          <tr>
+            <th>Segment Name</th>
+            <th>Segment Distance (m)</th>
+            <th>Your PR (sec)</th>
+            <th>Pace (sec/mi)</th>
+            <th>Course Record (sec)</th>
+            <th>Attempts/Athletes</th>
+            <th>Distance PP</th>
+            <th>Speed PP</th>
+            <th>Terrain PP</th>
+            <th>Competitive PP</th>
+            <th>Total PP</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for segment in segment_ids %}
+            <tr>
+                <td>{{ display_vals[segment]['name'] }}</td>
+                <td>{{ display_vals[segment]['dist'] }}</td>
+                <td>{{ display_vals[segment]['seg_pr'] }}</td>
+                <td>{{ display_vals[segment]['pace'] }}</td>
+                <td>{{ display_vals[segment]['seg_cr'] }}</td>
+                <td>{{ display_vals[segment]['attempts'] }}/{{ display_vals[segment]['athletes'] }}</td>
+                <td>{{ display_vals[segment]['dist_pp'] }}pp</td>
+                <td>{{ display_vals[segment]['spd_pp'] }}pp</td>
+                <td>{{ display_vals[segment]['terr_pp'] }}pp</td>
+                <td>{{ display_vals[segment]['comp_pp'] }}pp</td>
+                <td>{{ display_vals[segment]['total_pp'] }}pp</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+</body>
+</html>

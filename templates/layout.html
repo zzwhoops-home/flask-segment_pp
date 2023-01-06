@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    .title span {
+        background-color: rgb(255, 220, 184);
+        margin-top: 1%;
+        margin-left: 1%;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+    }
+</style>
+<header>
+    <div class="header">
+        <h1 class="title"><span>Segment Performance Points Project</span></h1>
+        <strong><p class="text">Welcome! Please click the "Login with Strava" button to calculate the current amount of performance points you have for all ranked segments.</p></strong>
+        <ul class="menu">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('info') }}">App Info</a></li>
+            <li><a href="{{ url_for('updates') }}">Future Updates</a></li>
+        </ul>
+        <div class="api_login">
+            <a href="{{ url_for('strava_login') }}">  
+                <input type="image" src="https://lh3.googleusercontent.com/pw/AM-JKLXsE7Wk1XcnoyNe0vhCtXOUDgBaJgCxi4F5G_8lB5JLEf2Oqrt1iJlAXMoJv_XAGBog84Pp6Mnq0X34tJhHYKsAkZt1fT5AiUeRDi9IsM1iSmw5pigRRJNrXeVchzkENIGE5Be3avQRm44x0Mq0IjRQ=w193-h48-no" name="strava_login" class="login" id="strava_login">
+            </a>
+        </div>
+    </div>
+</header>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+</body>
+</html>
