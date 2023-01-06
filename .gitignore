@@ -2,4 +2,8 @@
 /project_env
 /ssl_certificate_pems
 /test.py
-/useful_files
+/useful_files/auth.json
+/useful_files/creds.json
+/useful_files/info.txt
+/useful_files/test.txt
+/useful_files/example_athlete_response.json

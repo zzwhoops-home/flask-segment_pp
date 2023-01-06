@@ -1,0 +1,69 @@
+{
+    "id": 30517196,
+    "resource_state": 3,
+    "name": "PHS 0.88",
+    "activity_type": "Run",
+    "distance": 1418.9,
+    "average_grade": 0.0,
+    "maximum_grade": 6.7,
+    "elevation_high": 55.6,
+    "elevation_low": 46.2,
+    "start_latlng": [
+        40.361205,
+        -74.656686
+    ],
+    "end_latlng": [
+        40.361184,
+        -74.65673
+    ],
+    "elevation_profile": "https://d3o5xota0a1fcr.cloudfront.net/v6/charts/P25L3BAUONXED4X2V74BSDSD5ESQJRAPX4VCEX6DYYOZDVJTSFWQN2QSVZXMHIWTX3DJATB2V4UJL5MKG2PQ====",
+    "start_latitude": 40.361205,
+    "start_longitude": -74.656686,
+    "end_latitude": 40.361184,
+    "end_longitude": -74.65673,
+    "climb_category": 0,
+    "city": "Princeton",
+    "state": "New Jersey",
+    "country": "United States",
+    "private": false,
+    "hazardous": false,
+    "starred": false,
+    "created_at": "2021-12-03T03:50:09Z",
+    "updated_at": "2021-12-03T03:50:09Z",
+    "total_elevation_gain": 7.11,
+    "map": {
+        "id": "s30517196",
+        "polyline": "o`juFhktfMKs@Om@?[FU|Bc@jFcBpA[x@W`@UbBk@pBg@vA[F?@DNfBT|AZvAFr@VpBE`@OCc@FaBZoErAkAd@uA^uFnBs@Pc@FGUAs@MoBKy@Y}A",
+        "resource_state": 3
+    },
+    "effort_count": 256,
+    "athlete_count": 55,
+    "star_count": 0,
+    "athlete_segment_stats": {
+        "pr_elapsed_time": 373,
+        "pr_date": "2021-12-28",
+        "pr_activity_id": 6438302145,
+        "effort_count": 1
+    },
+    "xoms": {
+        "kom": "4:55",
+        "qom": "5:51",
+        "destination": {
+            "href": "strava://segments/30517196/leaderboard",
+            "type": "overall",
+            "name": "All-Time"
+        }
+    },
+    "local_legend": {
+        "athlete_id": 53052808,
+        "title": "Ryan Xu",
+        "profile": "https://graph.facebook.com/1509855382522640/picture?height=256&width=256",
+        "effort_description": "5 efforts in the last 90 days",
+        "effort_count": "5",
+        "effort_counts": {
+            "overall": "5 efforts",
+            "female": null
+        },
+        "destination": "strava://segments/30517196/local_legend?categories%5B%5D=overall"
+    }
+}
